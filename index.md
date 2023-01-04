@@ -33,28 +33,6 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 
 
 {% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
-
-
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to
-<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
-your own website. If you are running a self-organized workshop or have not put
-in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
-to let us know about your workshop and our administrator may contact you if we
-need any extra information.
-If this is a pilot workshop for a new lesson,
-set the `pilot` field to `true` in `_config.yml`.
-For workshops teaching a lesson in The Carpentries Incubator,
-remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
-fields in `_config.yml`
-</div>
-
-{% comment %}
-8< ============================= until here ==================
 {% endcomment %}
 
 
@@ -445,7 +423,7 @@ For online workshops, the section below provides:
 
 If you do not use Zoom for your online workshop, edit the file
 `_includes/install_instructions/videoconferencing.html`
-to include the relevant installation instructions.
+to include the relevant installation instrucctions.
 {% endcomment %}
 {% if online != "false" %}
 {% include install_instructions/videoconferencing.html %}
@@ -467,3 +445,21 @@ Please check the "Setup" page of
 [the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
 {% endif %}
+
+
+{% if site.curriculum == "swc-gapminder" %}
+<div id="data">
+<h3>Data Used in the Lessons</h3>
+See the following lesson setup instructions to download required data for the lessons:
+
+<ul>
+<li><a href="https://swcarpentry.github.io/shell-novice/setup.html">The UNIX Shell: Setup</a></li>
+
+<li><a href="https://swcarpentry.github.io/python-novice-gapminder/setup.html">Plotting and Programming in Python: Setup</a></li>
+</ul>
+{% endif %}
+
+{% comment %}
+I'm not sure what the correct zip file to download for the R class is...
+{% endcomment %}
+</div>
